@@ -2,23 +2,39 @@ import type React from "react";
 import { Button, Badge, Card } from "flowbite-react";
 import { Calendar, User, DollarSign, Clock, Dock } from "lucide-react";
 import Layout from "../../components/layout";
+import { ReusableBreadcrumb } from "../../components";
+import { useNavigate } from "react-router-dom";
+
+
 
 export const BeasiswaShow: React.FC = () => {
+    const navigate = useNavigate();
+
+    const breadcrumbItems = [
+        { text: "Home", href: "/dashboard" },
+        { text: "Beasiswa", href: "/beasiswa" },
+        { text: "Detail", href: "/beasiswa/show", isActive: true }
+    ];
+
+
   return (
     <Layout>
         <div className="max-w-7xl mx-auto p-6">
           <div className="flex justify-between items-center mb-6">
             <div className="flex items-center">
                 <Dock className="text-blue-500 text-4xl mr-3" />
-                <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-700 to-slate-700 text-transparent bg-clip-text animate-fade-in">
+                <h1 className="text-3xl font-bold text-gray-800 bg-gradient-to-r from-blue-700 to-slate-700 text-transparent bg-clip-text animate-fade-in">
                 Detail Beasiswa
                 </h1>
             </div>
             <div className="space-x-2 flex">
-              <Button color="light">Edit</Button>
+              <Button color="light" onClick={()=> navigate('/beasiswa/edit/1')}>Edit</Button>
               <Button color="failure">Hapus</Button>
             </div>
           </div>
+
+            <ReusableBreadcrumb items={breadcrumbItems} />
+          
 
           <hr className="my-4 border-t-2 border-gray-300" />
 
