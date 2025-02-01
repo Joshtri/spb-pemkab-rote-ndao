@@ -9,15 +9,15 @@ export const BeasiswaCreate: React.FC = () => {
     const navigate = useNavigate();
 
     const breadcrumbItems = [ 
-        { text: "Home", href: "/" },
+        { text: "Home", href: "/dashboard" },
         { text: "Beasiswa", href: "/beasiswa" },
-        { text: "Edit", href: "/beasiswa/edit" }
+        { text: "Tambah", href: "/beasiswa/create", isActive: true }
     ];
 
     return (
         <Layout>
             <div className="max-w-7xl mx-auto p-6">
-                <div className="flex items-center mb-3">
+                <div className="flex items-center mb-6">
                     <AwardIcon className="text-blue-500 text-4xl mr-3" />
                     <h1 className="text-3xl font-bold text-gray-800 bg-gradient-to-r from-blue-700 to-slate-700 text-transparent bg-clip-text animate-fade-in">
                         Tambah Beasiswa Baru
