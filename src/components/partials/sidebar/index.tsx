@@ -1,12 +1,14 @@
 import type React from "react";
 import { NavLink } from "react-router-dom";
-import { LayoutDashboard, Users, Settings, HelpCircle, School2, Verified, Dock } from "lucide-react";
+import { LayoutDashboard, Users, Settings, HelpCircle, School2, Verified, Dock, Ruler, Calculator } from "lucide-react";
 
 export const Sidebar: React.FC = () => {
   const menuItems = [
     { icon: LayoutDashboard, text: "Dashboard", path: "/dashboard" },
     { icon: Users, text: "Pengguna", path: "/pengguna" },
     { icon: School2, text: "Beasiswa", path: "/beasiswa" },
+    { icon: Ruler, text: "Kriteria", path: "/kriteria" },
+    { icon: Calculator, text: "HasilPerhitungan", path: "/hasil-perhitungan"},
     { icon: Verified, text: "Verifikasi Dokumen", path: "/verifikasi-dokumen" },
     { icon: Dock, text: "Laporan", path: "/laporan" },
     { icon: Settings, text: "Pengaturan", path: "/pengaturan" },
