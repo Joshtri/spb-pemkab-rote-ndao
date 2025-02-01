@@ -30,6 +30,12 @@ export const BeasiswaList: React.FC = () => {
 
   const navigate = useNavigate();
 
+  const breadcrumbItems = [
+    { text: "Home", href: "/dashboard" },
+    { text: "Beasiswa", href: "/beasiswa",   },
+    { text: "Daftar", href: "/beasiswa/list", isActive: true  },
+  ];
+
   return (
     <Layout>
       <div className="p-6">
@@ -41,12 +47,7 @@ export const BeasiswaList: React.FC = () => {
 
           <Button color="blue" onClick={() => navigate('/beasiswa/create')}>Tambah Beasiswa</Button>
         </div>
-        <ReusableBreadcrumb items={[
-          { text: "Home", href: "/" },
-          { text: "Beasiswa", href: "/beasiswa" },
-          { text: "List", href: "/beasiswa/list" },
-        ]}
-        />
+        <ReusableBreadcrumb items={breadcrumbItems}/>
         <hr className="my-4 border-t-2 border-gray-300" />
 
 
