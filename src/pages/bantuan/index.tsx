@@ -10,6 +10,7 @@ export const BantuanPage: React.FC = () => {
         { href: "/bantuan", text: "Bantuan", isActive: true }
     ];
 
+    
 
   return (
     <Layout>
