@@ -5,11 +5,12 @@ import './App.css'
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { DashboardPage } from './pages/dashboard'
-import { BeasiswaCreate, BeasiswaEdit, BeasiswaList, BeasiswaShow } from './pages/calon-penerima'
+import { BeasiswaCreate, BeasiswaEdit, CalonPenerimaList, BeasiswaShow } from './pages/calon-penerima'
 import { PenggunaCreate, PenggunaEdit, PenggunaList, PenggunaShow } from './pages/pengguna'
 import { PengaturanPage } from './pages/pengaturan'
 import BantuanPage from './pages/bantuan'
 import { KriteriaCreate, KriteriaEdit, KriteriaList, KriteriaShow } from './pages/kriteria'
+import Login from './pages/login'
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -22,7 +23,8 @@ function App() {
 
 
           <Route path="/beasiswa">  
-            <Route index element={<BeasiswaList />} />  
+          {/* rename all function name. */}
+            <Route index element={<CalonPenerimaList />} />  
             <Route path="create" element={<BeasiswaCreate />} />  
             <Route path="edit/:id" element={<BeasiswaEdit />} />  
             <Route path="show/:id" element={<BeasiswaShow />} />  
@@ -46,6 +48,8 @@ function App() {
 
           <Route path="/pengaturan" element={<PengaturanPage/>}/>
           <Route path="/bantuan" element={<BantuanPage/>}/>
+
+          <Route path="/login" element={<Login/>}/>
 
 
 
