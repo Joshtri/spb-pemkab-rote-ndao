@@ -5,10 +5,11 @@ import './App.css'
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { DashboardPage } from './pages/dashboard'
-import { BeasiswaCreate, BeasiswaEdit, BeasiswaList, BeasiswaShow } from './pages/beasiswa'
+import { BeasiswaCreate, BeasiswaEdit, BeasiswaList, BeasiswaShow } from './pages/calon-penerima'
 import { PenggunaCreate, PenggunaEdit, PenggunaList, PenggunaShow } from './pages/pengguna'
 import { PengaturanPage } from './pages/pengaturan'
 import BantuanPage from './pages/bantuan'
+import { KriteriaCreate, KriteriaEdit, KriteriaList, KriteriaShow } from './pages/kriteria'
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -33,6 +34,14 @@ function App() {
             <Route path="create" element={<PenggunaCreate />} />  
             <Route path="edit/:id" element={<PenggunaEdit />} />  
             <Route path="show/:id" element={<PenggunaShow />} />  
+          </Route>
+
+
+          <Route path="kriteria">
+            <Route index element={<KriteriaList />} />  
+            <Route path="create" element={<KriteriaCreate />} />  
+            <Route path="edit/:id" element={<KriteriaEdit />} />  
+            <Route path="show/:id" element={<KriteriaShow />} />
           </Route>
 
           <Route path="/pengaturan" element={<PengaturanPage/>}/>

@@ -5,12 +5,12 @@ import {  Calendar, Edit } from "lucide-react"
 import { ReusableBreadcrumb } from "../../components";
 import Layout from "../../components/layout";
 
-export const KriteriaEdit: React.FC = () => {
+export const BeasiswaEdit: React.FC = () => {
 
 
     const breadcrumbItems = [ 
         { text: "Home", href: "/dashboard" },
-        { text: "Kriteria", href: "/kriteria" },
+        { text: "Beasiswa", href: "/beasiswa" },
         { text: "Edit", href: "/beasiswa/edit", isActive: true }
     ];
 

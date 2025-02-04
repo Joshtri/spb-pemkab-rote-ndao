@@ -5,13 +5,13 @@ import { useNavigate } from "react-router-dom";
 import { ReusableBreadcrumb } from "../../components";
 import { AwardIcon } from "lucide-react";
 
-export const KriteriaCreate: React.FC = () => {
+export const BeasiswaCreate: React.FC = () => {
     const navigate = useNavigate();
 
     const breadcrumbItems = [ 
         { text: "Home", href: "/dashboard" },
-        { text: "Kriteria", href: "/kriteria" },
-        { text: "Tambah", href: "/kriteria/create", isActive: true }
+        { text: "Beasiswa", href: "/beasiswa" },
+        { text: "Tambah", href: "/beasiswa/create", isActive: true }
     ];
 
     return (
@@ -129,4 +129,4 @@ export const KriteriaCreate: React.FC = () => {
     );
 };
 
-// export default BeasiswaCreate;
+export default BeasiswaCreate;

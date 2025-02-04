@@ -6,7 +6,7 @@ export const Sidebar: React.FC = () => {
   const menuItems = [
     { icon: LayoutDashboard, text: "Dashboard", path: "/dashboard" },
     { icon: Users, text: "Pengguna", path: "/pengguna" },
-    { icon: School2, text: "Beasiswa", path: "/beasiswa" },
+    { icon: School2, text: "Calon Penerima", path: "/calon-penerima" },
     { icon: Ruler, text: "Kriteria", path: "/kriteria" },
     { icon: Calculator, text: "HasilPerhitungan", path: "/hasil-perhitungan"},
     { icon: Verified, text: "Verifikasi Dokumen", path: "/verifikasi-dokumen" },
